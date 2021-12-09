@@ -1,0 +1,30 @@
+body{
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.bg-form{
+	background-color: rgba(0,0,0,0.5)!important;
+}
+.sombra img {
+   display:block;
+   position:relative;
+   background-color:rgba(0,0,0,0.2);
+   margin:-6px 6px 6px -6px;
+ }
+ 
+.bg-cliente{
+	background-color: rgba(0,0,0,0.8);
+}
+
+.bg-bodegalistar{
+	background-color: #cd6133!important;
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.5);
+  	border: 3px solid #cd6133;
+}

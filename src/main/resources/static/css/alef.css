@@ -1,0 +1,33 @@
+.abs-center {
+ display:flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+form{
+  width: 10000px;
+}
+body{
+	font-family: 'Alef', sans-serif;
+}
+.cuadro{
+	background-color:rgba(0,0,0,1);
+}
+
+.bg-fanta{
+	background-color: #6F1E51!important;
+}
+
+.borde{
+	border: solid blue;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tiendas{
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.5);
+  	border: 3px solid #dd3445;
+}

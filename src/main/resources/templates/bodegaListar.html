@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>TuBodega.pe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+	rel="stylesheet">
+<link th:href="@{/css/balsans.css}" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body
+	th:style="'background: url(/img/dela.jpg) no-repeat center center fixed;'">
+	<nav class="navbar navbar-dark bg-dark" th:fragment="nav">
+		<div class="container-fluid m-2  "
+			style="font-family: 'Titan One', cursive;">
+			<b><a class="navbar-brand" th:href="@{/}"> <img
+					src="https://images.vexels.com/media/users/3/200165/isolated/preview/77ff044edeca7bce4b668190e74efb17-trazo-de-icono-de-tienda.png"
+					alt="" width="50" height="44"
+					class="d-inline-block align-text-center"> TuBodega
+
+			</a></b> <a class="btn btn-success" th:href="@{/}">Logout</a>
+		</div>
+	</nav>
+
+	<h2 class="m-3 title">Lista de Tiendas por RUC</h2>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+
+				<div class="card mt-5 bg-bodegalistar">
+					<div class="card-header"></div>
+					<div class="card-body">
+						<a class="btn btn-primary">Crear otra tienda</a> <br> <br>*Tu
+						RUC no se visualizara en las busquedas de tiendas<br>
+						<table
+							class="table table-condensed text-center table-dark table-striped table-bordered mt-3">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col">RUC</th>
+									<th scope="col">Nombre</th>
+									<th scope="col">Direccion</th>
+									<th scope="col">Region</th>
+									<th scope="col">Provincia</th>
+									<th scope="col">Disitrito</th>
+									<th scope="col">Productos</th>
+									<th scope="col">Editar</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr th:each="bodega : ${bodegas}">
+									<th scope="row" th:text="${bodega.id}" hidden></th>
+									<td th:text="${bodega.ruc}"></td>
+									<td th:text="${bodega.nombre}"></td>
+									<td th:text="${bodega.direccion}"></td>
+									<td th:text="${bodega.region}"></td>
+									<td th:text="${bodega.provincia}"></td>
+									<td th:text="${bodega.distrito}"></td>
+									<td th:text="${bodega.productos}"></td>
+									<td><a class="btn btn-warning"
+										th:href="@{/bodegas/form/} +${bodega.id}" th:text="Editar"></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

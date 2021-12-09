@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>TuBodega.pe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+	rel="stylesheet">
+<link th:href="@{/css/balsans.css}" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body
+	th:style="'background: url(/img/centrov2.jpg) no-repeat center center fixed;'">
+	<!-- create navigation bar ( header) -->
+	<div th:replace="~{fragment/nav :: nav}"></div>
+	<br>
+	<br>
+	<section class="vh-100">
+		<div class="container-fluid h-custom">
+			<div
+				class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-md-9 col-lg-6 col-xl-5 sombra">
+					<img
+						src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png"
+						class="img-fluid" alt="Sample image">
+				</div>
+				<div
+					class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 card text-white bg-form">
+					<h2>Registrate</h2>
+					<h4>Paso 1</h4>
+					<form id="miForm" th:action="@{/usuarios/insertar}"
+						th:object="${usuario}" method="POST">
+						<div class="form-outline mb-4">
+							<label for="nombre">Nombre</label> <input type="text"
+								class="form-control" th:field="*{nombre}" name="nombre" required>
+
+						</div>
+						<div class="form-outline mb-4">
+							<label for="nombre">Apellido</label> <input type="text"
+								class="form-control" th:field="*{apellido}" name="apellido"
+								required>
+						</div>
+						<div class="form-outline mb-4">
+							<label for="nombre">Correo</label> <input type="text"
+								class="form-control" th:field="*{correo}" name="correo" required>
+						</div>
+						<!-- Password input -->
+						<div class="form-outline mb-3">
+							<label for="clave">Clave</label> <input type="password"
+								class="form-control" th:field="*{clave}" name="clave" required>
+						</div>
+						<input type="submit" th:value="${btn}" class="btn btn-primary">
+						<a type="button" th:href="@{/}" class="btn btn-warning ">Volver</a>
+					</form>
+					<br> <label>Ya tienes una cuenta?</label> <a
+						th:href="@{/ruc/formulario}">Login</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuBodega.pe</title>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+	integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+	integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+	crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alef&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link th:href="@{/css/alef.css}" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body
+	th:style="'background: url(/img/refri.jpg) no-repeat center center fixed;'">
+	<nav class="navbar navbar-dark bg-dark" th:fragment="nav">
+		<div class="container-fluid m-2  "
+			style="font-family: 'Titan One', cursive;">
+			<b><a class="navbar-brand" th:href="@{/}"> <img
+					src="https://images.vexels.com/media/users/3/200165/isolated/preview/77ff044edeca7bce4b668190e74efb17-trazo-de-icono-de-tienda.png"
+					alt="" width="50" height="44"
+					class="d-inline-block align-text-center"> TuBodega
+
+			</a></b> <a class="btn btn-success" th:href="@{/}">Logout</a>
+		</div>
+	</nav>
+	<br>
+	<div class="col-12">
+		<div class="card mt-5 bg-fanta">
+			<div class="card-header"></div>
+			<div class="card-body text-white">
+				* Se necesita su RUC para poder visualizar sus tiendas para mayor
+				seguridad
+				<div class="col-12">
+					<form th:action="@{/bodegas/listar}" th:object="${bodega}"
+						method="GET">
+						<div class="mb-3">
+							<label for="" class="form-label">Ingrese su RUC:</label> <input
+								type="text" class="form-control" th:field="*{ruc}" name="ruc">
+
+							<br> <input type="submit" th:value="Buscar"
+								class="btn btn-primary">
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

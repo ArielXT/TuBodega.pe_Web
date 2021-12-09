@@ -1,0 +1,36 @@
+.arriba{
+	opacity:0.5;
+	background-color:rgb(165, 208, 203 );
+    text-align: center;
+}
+.centrado{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.centradoimg{
+     position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.centradoimg2{
+     position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-cliente{
+	background-color: #6F1E51!important;
+}
+
+h1 {
+ 	font-family: sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.5);
+  	border: 3px solid #6F1E51;
+}

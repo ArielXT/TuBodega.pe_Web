@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="ISO-8859-1">
+<title>TuBodega.pe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link th:href="@{/css/estilos.css}" rel="stylesheet" />
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-dark" th:fragment="nav">
+		<div class="container-fluid m-2  "
+			style="font-family: 'Titan One', cursive;">
+			<b><a class="navbar-brand" th:href="@{/}"> <img
+					src="https://images.vexels.com/media/users/3/200165/isolated/preview/77ff044edeca7bce4b668190e74efb17-trazo-de-icono-de-tienda.png"
+					alt="" width="50" height="44"
+					class="d-inline-block align-text-center"> TuBodega
+
+			</a></b> <a class="btn btn-success" th:href="@{/}">Logout</a>
+		</div>
+	</nav>
+
+
+	<div>
+		Proceso resuelto verifique los cambios <a
+			th:href="@{/bodegas/usuario}" class="btn btn-warning">Verificar</a>
+	</div>
+	</section>
+</body>
+</html>
